@@ -3,12 +3,12 @@ export default function Education({ education }) {
 
   return (
     <section className="glass-card">
-      <h3 className="text-xl font-bold text-slate-800 dark:text-zinc-100 font-display border-b border-slate-100 dark:border-zinc-800 pb-2 mb-8">
+      <h3 className="text-xl font-bold text-slate-800 dark:text-zinc-100 font-display border-b border-slate-100 dark:border-zinc-800 pb-2 mb-8 print:mb-4">
         Education
       </h3>
       <div className="relative border-l border-slate-200 dark:border-zinc-800 ml-4 space-y-8">
         {education.map((edu, index) => (
-          <div key={index} className="relative pl-6 sm:pl-8 group">
+          <div key={index} className="relative pl-6 sm:pl-8 group print:break-inside-avoid">
             {/* Timeline Dot Indicator */}
             <div className="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full bg-slate-200 dark:bg-zinc-800 group-hover:bg-indigo-500 group-hover:ring-4 group-hover:ring-indigo-100 dark:group-hover:ring-indigo-950/40 transition-all duration-300" />
             

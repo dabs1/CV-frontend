@@ -96,7 +96,7 @@
   .glass-card {
     border: none !important;
     padding: 0 !important;
-    page-break-inside: avoid !important;
+    page-break-inside: auto !important;
     background: none !important;
   }
 

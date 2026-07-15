@@ -8,7 +8,7 @@ export default function Experience({ experience }) {
       </h3>
       <div className="relative border-l border-slate-200 dark:border-zinc-800 ml-4 space-y-10">
         {experience.map((exp, index) => (
-          <div key={index} className="relative pl-6 sm:pl-8 group">
+          <div key={index} className="relative pl-6 sm:pl-8 group print:break-inside-avoid">
             {/* Timeline Dot Indicator */}
             <div className="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full bg-slate-200 dark:bg-zinc-800 group-hover:bg-indigo-500 group-hover:ring-4 group-hover:ring-indigo-100 dark:group-hover:ring-indigo-950/40 transition-all duration-300" />
             
