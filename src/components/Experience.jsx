@@ -8,7 +8,7 @@ export default function Experience({ experience }) {
       </h3>
       <div className="relative border-l border-slate-200 dark:border-zinc-800 ml-4 space-y-10 print:space-y-4">
         {experience.map((exp, index) => (
-          <div key={index} className="relative pl-6 sm:pl-8 group print:break-inside-avoid">
+          <div key={index} className="relative pl-6 sm:pl-8 group">
             {/* Timeline Dot Indicator */}
             <div className="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full bg-slate-200 dark:bg-zinc-800 group-hover:bg-indigo-500 group-hover:ring-4 group-hover:ring-indigo-100 dark:group-hover:ring-indigo-950/40 transition-all duration-300" />
             
@@ -35,7 +35,7 @@ export default function Experience({ experience }) {
             {exp.highlights && exp.highlights.length > 0 && (
               <ul className="list-disc list-outside text-slate-600 dark:text-zinc-300 text-sm space-y-2 ml-4">
                 {exp.highlights.map((item, idx) => (
-                  <li key={idx} className="leading-relaxed hover:text-slate-800 dark:hover:text-zinc-100 transition-colors">
+                  <li key={idx} className="leading-relaxed hover:text-slate-800 dark:hover:text-zinc-100 transition-colors print:break-inside-avoid print:mb-2">
                     {item.includes('::') ? (
                       <>
                         <span className="block font-bold text-slate-800 dark:text-zinc-100">{item.split('::')[0]}</span>
