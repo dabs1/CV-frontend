@@ -64,6 +64,7 @@
 
   .min-h-screen {
     background: white !important;
+    min-height: auto !important;
   }
 
   /* Strip all effects that force browser rasterization */

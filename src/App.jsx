@@ -77,7 +77,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50/50 dark:bg-zinc-950/80 text-slate-800 dark:text-zinc-100 font-sans transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-6 print:space-y-4 print:py-0">
 
         {/* Floating/Fixed Navigation Controls */}
         <div className="no-print flex justify-end items-center gap-3">
@@ -112,17 +112,17 @@ export default function App() {
         <Header personalInfo={cvData.personalInfo} />
 
         {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 print:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 print:grid-cols-3 gap-6 print:gap-4">
 
           {/* Main Area: Work Experience & Education (col-span-2) */}
-          <div className="lg:col-span-2 print:col-span-2 space-y-6">
+          <div className="lg:col-span-2 print:col-span-2 space-y-6 print:space-y-3">
             <Experience experience={cvData.experience} />
             <Education education={cvData.education} />
             <Volunteer volunteer={cvData.volunteer} />
           </div>
 
           {/* Sidebar Area: Technical Skills & Languages (col-span-1) */}
-          <div className="space-y-6 print:col-span-1">
+          <div className="space-y-6 print:space-y-3 print:col-span-1">
             <Skills skills={cvData.skills} />
             <Languages languages={cvData.languages} />
           </div>
