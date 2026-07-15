@@ -129,7 +129,7 @@ export default function Header({ personalInfo }) {
               CV Web Site Version
             </span>
             <div className="bg-white p-1.5 rounded-lg border border-slate-200 shadow-sm">
-              <QRCode value="http://localhost:5173/" size={56} level="L" />
+              <QRCode value="https://cvtomasfrancisco.vercel.app/" size={56} level="L" />
             </div>
           </div>
           
