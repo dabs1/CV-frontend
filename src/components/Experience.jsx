@@ -21,9 +21,11 @@ export default function Experience({ experience }) {
                   {exp.company}
                 </div>
               </div>
-              <span className="text-xs font-semibold px-2.5 py-1 bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400 rounded-full border border-slate-200 dark:border-zinc-700/60 w-max shrink-0">
-                {exp.startDate} – {exp.endDate}
-              </span>
+              {(exp.startDate || exp.endDate) && (
+                <span className="text-xs font-semibold px-2.5 py-1 bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400 rounded-full border border-slate-200 dark:border-zinc-700/60 w-max shrink-0">
+                  {exp.startDate}{exp.startDate && exp.endDate ? ' – ' : ''}{exp.endDate}
+                </span>
+              )}
             </div>
 
             {exp.description && (
