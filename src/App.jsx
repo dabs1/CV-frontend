@@ -116,9 +116,9 @@ export default function App() {
 
           {/* Main Area: Work Experience & Education (col-span-2) */}
           <div className="lg:col-span-2 print:col-span-2 space-y-6 print:space-y-3">
-            <Experience experience={cvData.experience} />
             <Education education={cvData.education} />
             <Volunteer volunteer={cvData.volunteer} />
+            <Experience experience={cvData.experience} />
           </div>
 
           {/* Sidebar Area: Technical Skills & Languages (col-span-1) */}
