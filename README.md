@@ -1,16 +1,60 @@
-# React + Vite
+# Interactive CV Frontend 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the frontend repository of my Interactive Curriculum Vitae (CV) web application. This project is a modern, responsive, and dynamic web-based CV built using React, Vite, and Tailwind CSS. It communicates with a Spring Boot backend to fetch and display my professional experience, education, skills, and projects.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Dynamic Content**: Fetches CV data (Experience, Education, Skills, etc.) from a RESTful API backend.
+- **Responsive Design**: Fully responsive layout optimized for mobile, tablet, and desktop devices using Tailwind CSS.
+- **Dark Mode**: Built-in support for dark mode, togglable by the user.
+- **PDF Export**: Seamless functionality to export the CV to a well-formatted PDF document directly from the browser.
+- **Bento Grid Layout**: Utilizes a modern and clean "bento grid" layout for organizing information.
+- **QR Code Integration**: Generates a clickable QR code for easy access to the live site.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React](https://react.dev/) powered by [Vite](https://vitejs.dev/) for fast development and build times.
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) for utility-first styling.
+- **QR Codes**: `react-qr-code` for generating dynamic QR codes.
+- **Deployment**: Configured for deployment on Vercel.
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/dabs1/CV-frontend.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd CV-frontend
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the App Locally
+
+To start the development server, run:
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`. 
+*Note: Make sure the backend is also running so that the frontend can fetch the CV data successfully.*
+
+## 🌐 Live Demo
+
+Check out the live version of this CV at: [cvtomasfrancisco.vercel.app](https://cvtomasfrancisco.vercel.app/)
+
+## 🤝 Backend Repository
+
+This frontend consumes an API provided by a Spring Boot backend. You can find the backend repository on my GitHub profile.
