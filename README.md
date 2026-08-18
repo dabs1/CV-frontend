@@ -1,15 +1,15 @@
-# Interactive CV Frontend
+# Curriculum Vitae (CV) Frontend
 
-This repository contains the frontend application for my Interactive Curriculum Vitae (CV). It is a modern, responsive web application built with React, Vite, and Tailwind CSS. The application is designed to fetch and display my professional experience, education, skills, and projects dynamically from a Spring Boot backend.
+This repository contains the frontend application for my Curriculum Vitae (CV). It's a web application built with React, Vite, and Tailwind CSS. The application is designed to fetch and display my professional experience, education, skills, and projects dynamically from a Spring Boot backend.
 
 ## Features
 
-- **Dynamic Content**: Fetches CV data, including experience, education, and skills, from a RESTful API.
+- **Data Fetching**: Fetches CV data, including experience, education, and skills, from a RESTful API.
 - **Responsive Design**: Provides a consistent and optimized viewing experience across mobile, tablet, and desktop devices.
 - **Dark Mode**: Includes built-in support for a dark theme, which users can toggle based on their preference.
 - **PDF Export**: Allows users to export the CV directly from the browser into a properly formatted PDF document.
-- **Bento Grid Layout**: Organizes information clearly using a modern grid-based layout structure.
-- **QR Code Integration**: Generates a clickable QR code for quick access to the live application.
+- **Grid Layout**: Organizes information clearly using a grid-based layout structure.
+- **QR Code**: Generates a QR code for quick access to the live application.
 
 ## Technology Stack
 
@@ -31,11 +31,8 @@ This repository contains the frontend application for my Interactive Curriculum 
    ```bash
    git clone https://github.com/dabs1/CV-frontend.git
    ```
-2. Navigate to the project directory:
-   ```bash
-   cd CV-frontend
-   ```
-3. Install the required dependencies:
+
+2. Install the required dependencies in the respective directory:
    ```bash
    npm install
    ```
