@@ -124,13 +124,16 @@ export default function Header({ personalInfo }) {
           </div>
           
           {/* QR Code */}
-          <div className="flex flex-col gap-2 items-center">
+          <div className="flex flex-col gap-1 items-center">
             <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">
               CV Web Site Version
             </span>
-            <div className="bg-white p-1.5 rounded-lg border border-slate-200 shadow-sm">
+            <a href="https://cvtomasfrancisco.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-white p-1.5 rounded-lg border border-slate-200 shadow-sm hover:border-indigo-300 transition-colors">
               <QRCode value="https://cvtomasfrancisco.vercel.app/" size={56} level="L" />
-            </div>
+            </a>
+            <a href="https://cvtomasfrancisco.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-[9px] text-slate-500 hover:text-indigo-600 break-all leading-tight mt-1">
+              cvtomasfrancisco.vercel.app
+            </a>
           </div>
           
         </div>
