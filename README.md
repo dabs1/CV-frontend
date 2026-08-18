@@ -1,28 +1,28 @@
-# Interactive CV Frontend 🚀
+# Interactive CV Frontend
 
-Welcome to the frontend repository of my Interactive Curriculum Vitae (CV) web application. This project is a modern, responsive, and dynamic web-based CV built using React, Vite, and Tailwind CSS. It communicates with a Spring Boot backend to fetch and display my professional experience, education, skills, and projects.
+This repository contains the frontend application for my Interactive Curriculum Vitae (CV). It is a modern, responsive web application built with React, Vite, and Tailwind CSS. The application is designed to fetch and display my professional experience, education, skills, and projects dynamically from a Spring Boot backend.
 
-## 🌟 Features
+## Features
 
-- **Dynamic Content**: Fetches CV data (Experience, Education, Skills, etc.) from a RESTful API backend.
-- **Responsive Design**: Fully responsive layout optimized for mobile, tablet, and desktop devices using Tailwind CSS.
-- **Dark Mode**: Built-in support for dark mode, togglable by the user.
-- **PDF Export**: Seamless functionality to export the CV to a well-formatted PDF document directly from the browser.
-- **Bento Grid Layout**: Utilizes a modern and clean "bento grid" layout for organizing information.
-- **QR Code Integration**: Generates a clickable QR code for easy access to the live site.
+- **Dynamic Content**: Fetches CV data, including experience, education, and skills, from a RESTful API.
+- **Responsive Design**: Provides a consistent and optimized viewing experience across mobile, tablet, and desktop devices.
+- **Dark Mode**: Includes built-in support for a dark theme, which users can toggle based on their preference.
+- **PDF Export**: Allows users to export the CV directly from the browser into a properly formatted PDF document.
+- **Bento Grid Layout**: Organizes information clearly using a modern grid-based layout structure.
+- **QR Code Integration**: Generates a clickable QR code for quick access to the live application.
 
-## 🛠️ Tech Stack
+## Technology Stack
 
-- **Framework**: [React](https://react.dev/) powered by [Vite](https://vitejs.dev/) for fast development and build times.
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) for utility-first styling.
-- **QR Codes**: `react-qr-code` for generating dynamic QR codes.
-- **Deployment**: Configured for deployment on Vercel.
+- **Framework**: [React](https://react.dev/) with [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **QR Codes**: `react-qr-code` library
+- **Deployment**: Configured for Vercel
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18 or higher recommended)
+- Node.js (v18 or higher is recommended)
 - npm or yarn
 
 ### Installation
@@ -35,26 +35,26 @@ Welcome to the frontend repository of my Interactive Curriculum Vitae (CV) web a
    ```bash
    cd CV-frontend
    ```
-3. Install the dependencies:
+3. Install the required dependencies:
    ```bash
    npm install
    ```
 
-### Running the App Locally
+### Running the Application
 
-To start the development server, run:
+To start the local development server, run:
 
 ```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173`. 
-*Note: Make sure the backend is also running so that the frontend can fetch the CV data successfully.*
+The application will be accessible at `http://localhost:5173`. 
+Note: Ensure that the backend service is also running so the frontend can successfully retrieve the CV data.
 
-## 🌐 Live Demo
+## Live Application
 
-Check out the live version of this CV at: [cvtomasfrancisco.vercel.app](https://cvtomasfrancisco.vercel.app/)
+The live version of this CV is available at: [cvtomasfrancisco.vercel.app](https://cvtomasfrancisco.vercel.app/)
 
-## 🤝 Backend Repository
+## Backend Services
 
-This frontend consumes an API provided by a Spring Boot backend. You can find the backend repository on my GitHub profile.
+This frontend relies on an API provided by a Spring Boot backend. The backend repository can be found on my GitHub profile.
