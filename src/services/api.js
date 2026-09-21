@@ -1,6 +1,6 @@
-const API_URL = import.meta.env.DEV 
-    ? '' 
-    : (import.meta.env.VITE_API_URL || 'https://cv-backend-production-b64f.up.railway.app');
+const API_URL = import.meta.env.DEV
+    ? ''
+    : (import.meta.env.VITE_API_URL || 'https://cv-backend-n9qd.onrender.com');
 
 export const fetchCv = async () => {
     try {

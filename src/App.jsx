@@ -10,22 +10,45 @@ import Volunteer from './components/Volunteer';
 export default function App() {
   const [cvData, setCvData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [slowLoading, setSlowLoading] = useState(false);
   const [error, setError] = useState(null);
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem('theme');
     return saved ? saved === 'dark' : false;
   });
 
-  useEffect(() => {
-    fetchCv()
-      .then(data => {
+  const loadCvData = async (retries = 3) => {
+    setLoading(true);
+    setError(null);
+    setSlowLoading(false);
+
+    // Se demorar mais de 3.5 segundos, mostra aviso amigável
+    const timer = setTimeout(() => {
+      setSlowLoading(true);
+    }, 3500);
+
+    for (let attempt = 1; attempt <= retries; attempt++) {
+      try {
+        const data = await fetchCv();
         setCvData(data);
         setLoading(false);
-      })
-      .catch(err => {
-        setError(err.message);
-        setLoading(false);
-      });
+        clearTimeout(timer);
+        return;
+      } catch (err) {
+        if (attempt === retries) {
+          setError(err.message || 'Failed to connect to backend');
+          setLoading(false);
+          clearTimeout(timer);
+        } else {
+          // Aguarda 3 segundos antes da próxima tentativa enquanto o Render acorda
+          await new Promise((resolve) => setTimeout(resolve, 3000));
+        }
+      }
+    }
+  };
+
+  useEffect(() => {
+    loadCvData();
   }, []);
 
   useEffect(() => {
@@ -58,7 +81,9 @@ export default function App() {
       <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-zinc-950 text-slate-600 dark:text-zinc-400">
         <div className="flex flex-col items-center gap-3">
           <div className="w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
-          <span className="animate-pulse text-sm font-medium">Loading CV...</span>
+          <span className="text-sm font-medium transition-opacity duration-300">
+            {slowLoading ? 'Loading CV... may take a few seconds' : 'Loading CV...'}
+          </span>
         </div>
       </div>
     );
@@ -66,10 +91,16 @@ export default function App() {
 
   if (error) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-zinc-950 text-red-500 font-medium">
+      <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-zinc-950 text-slate-700 dark:text-zinc-300">
         <div className="text-center p-6 bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-2xl shadow-sm max-w-md mx-4">
-          <p className="mb-2"> Connection Error</p>
-          <p className="text-sm text-slate-500 dark:text-zinc-400">{error}</p>
+          <p className="mb-2 text-red-500 font-semibold">⚠️ Connection Error</p>
+          <p className="text-sm text-slate-500 dark:text-zinc-400 mb-4">{error}</p>
+          <button
+            onClick={() => loadCvData()}
+            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white rounded-xl text-sm font-semibold transition-all shadow-sm cursor-pointer"
+          >
+            Try Again
+          </button>
         </div>
       </div>
     );
